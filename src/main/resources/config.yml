@@ -1,0 +1,54 @@
+# sCmdHide Configuration File
+#
+# Placeholders: %player% - The player's name. %command% - The command they tried to use.
+# Use '&' for classic color codes. For HEX colors, use <#RRGGBB>.
+# You can find sound names here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+
+settings:
+  # Should we notify admins when a command is blocked?
+  notify-admins: true
+
+  # List of commands to block for non-OP players.
+  # Do not include the '/' slash. These are case-insensitive.
+  blocked-commands:
+    - "gamemode"
+    - "gm"
+    - "give"
+    - "op"
+    - "deop"
+    - "ban"
+    - "kick"
+    - "stop"
+    - "restart"
+    - "plugins"
+    - "pl"
+    - "vanish"
+    - "v"
+    - "minecraft:gamemode" # Also block vanilla commands with namespace
+    - "minecraft:give"
+
+messages:
+  # The message shown in chat to the player whose command was blocked.
+  blocked-command-message:
+    - "&8&m--------------------------------------------------"
+    - ""
+    - "<#FFBF00>&l sCmdHide &8» <#FF5733>Access Denied!"
+    - "&7Sorry, %player%&7, you no longer have access to this command."
+    - ""
+    - "&8&m--------------------------------------------------"
+
+  # Send a message on the player's screen? (true/false)
+  send-title-message: true
+  title: "&c&lCOMMAND BLOCKED"
+  subtitle: "&7You do not have permission."
+
+  # The notification sent to online staff with the 'scmdhide.notify' permission.
+  admin-notification: "&c&l[!] &e%player% &7tried to use the blocked command: &c/%command%"
+
+sounds:
+  # Play a sound to the player when their command is blocked? (true/false)
+  play-sound: true
+  # Sound to play. Examples: BLOCK_ANVIL_LAND, ENTITY_VILLAGER_NO, UI_BUTTON_CLICK
+  sound-effect: "BLOCK_ANVIL_LAND"
+  volume: 1.0
+  pitch: 1.2

@@ -1,0 +1,27 @@
+name: sCmdHide
+version: '1.0'
+main: developer.sayamdev.sCmdHide.SCmdHide
+api-version: '1.20'
+prefix: sCmdHide
+authors: [ sayamdev, spacexstudio ]
+description: sCmdHide
+website: https://sayamthrcoder.netlify.app/
+
+commands:
+  scmdhide:
+    description: Main command for the sCmdHide plugin.
+    aliases: [sch]
+    usage: /<command> [reload|help]
+permissions:
+  scmdhide.reload:
+    description: Allows reloading the plugin's configuration.
+    default: op
+  scmdhide.help:
+    description: Allows viewing the plugin's help message.
+    default: true
+  scmdhide.bypass:
+    description: Allows non-OP players to bypass command blocking.
+    default: op
+  scmdhide.notify:
+    description: Receives notifications when a command is blocked.
+    default: op
